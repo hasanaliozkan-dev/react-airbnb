@@ -4,22 +4,26 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Card from './components/Card'
 
+import Data from './data'
 
 
 
 
 function App() {
-  return(<div>
+
+  const cards = Data.map(item => {
+        return <Card 
+               item = {item}
+
+                />
+    })
+  return(
+  <div>
     <Navbar/>
     <Hero/>
-    <Card
-      img={"katie-zaferes.png"}
-      rating="5.0"
-      reviewCount={6}
-      country="USA"
-      title="Life Lessons with Katie Zaferes"
-      price={136}
-     />
+    <section className="cards-list">
+                {cards}{cards}{cards}{cards}{cards}{cards}{cards}{cards}{cards}{cards}{cards}{cards}
+    </section>
   </div>)
 }
 
